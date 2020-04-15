@@ -41,5 +41,5 @@ jobs:
 |   merge_method  | ✅          | merge                  |   merge, rebase or squash                            |
 |   pr_title      | ✅          | Fork Sync              |   Title of the created pull request                  |
 |   pr_message    | ✅          |                        |   Message of the created pull request                |
-|   allbranches   | ✅          |    false              |   Message of the created pull request                |
+|   allbranches   | ✅          |    false               |   Wheather sync all branches               |
 
