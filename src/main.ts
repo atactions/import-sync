@@ -25,7 +25,7 @@ async function run() {
       core.setFailed('Failed to create or merge pull request');
     }
   }
-}else{
+} else {
   try{
     let tp=await octokit.repos.get({ owner: context.repo.owner, repo: context.repo.repo});
     let p=await octokit.repos.listBranches({ owner:owner, repo:tp.parent.name});
