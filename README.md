@@ -1,6 +1,6 @@
 # Fork Sync
-[![Build](https://github.com/tg908/fork-sync/workflows/PR%20Checks/badge.svg)](https://github.com/tg908/fork-sync/actions?workflow=PR%20Checks)
-![Version](https://img.shields.io/github/v/release/tg908/fork-sync?style=flat-square)
+[![Build](https://github.com/atactions/fork-sync/workflows/Build%20and%20publish%20result/badge.svg)](https://github.com/atactions/fork-sync/actions?workflow=Build%20and%20publish%20result)
+![Version](https://img.shields.io/github/v/release/atactions/fork-sync?style=flat-square)
 
 Forked from TG908/fork-sync with additions of `allbranches` parameter to sync all branches of fork repo.
 
