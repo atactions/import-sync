@@ -22,12 +22,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: TG908/fork-sync@v1.1
+      - uses: atactions/fork-sync@v1.1
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          owner: llvm
-          base: master
-          head: master
+          owner: llvm #owner of origin repo 
+          allbranches: true
+          
 ```
 
 # Parameters
@@ -41,3 +41,5 @@ jobs:
 |   merge_method  | ✅          | merge                  |   merge, rebase or squash                            |
 |   pr_title      | ✅          | Fork Sync              |   Title of the created pull request                  |
 |   pr_message    | ✅          |                        |   Message of the created pull request                |
+|   allbranches   | ✅          |    false              |   Message of the created pull request                |
+
