@@ -2,6 +2,8 @@
 [![Build](https://github.com/tg908/fork-sync/workflows/PR%20Checks/badge.svg)](https://github.com/tg908/fork-sync/actions?workflow=PR%20Checks)
 ![Version](https://img.shields.io/github/v/release/tg908/fork-sync?style=flat-square)
 
+Forked from TG908/fork-sync with additions of `allbranches` parameter to sync all branches of fork repo.
+
 Github action to sync your Forks.
 This action uses octokit and the GitHub API to automatically creates and merges a pull request with the head defined by `ownwer`:`head` into the base defined by `base`. If you create a PR in the same repository you can omit the `owner` parameter.
 
