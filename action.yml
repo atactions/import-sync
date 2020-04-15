@@ -30,7 +30,10 @@ inputs:
   pr_message:
     description: 'The message in the pull request'
     required: false
-
+  allbranches:
+    description: 'Wheather sync all branches'
+    required: false
+    
 runs:
   using: 'node12'
   main: 'lib/main.js'
