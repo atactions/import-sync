@@ -1,0 +1,35 @@
+name: "Build and publish result"
+on:  
+  push:
+    branches:    
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: "npm ci"
+      run: npm ci
+
+    - name: "npm run build"
+      run: npm run build
+
+    - name: "npm run test"
+      run: npm run test
+
+    - name: "check for uncommitted changes"
+      # Ensure no changes, but ignore node_modules dir since dev/fresh ci deps installed.
+      run: |
+        git diff --exit-code --stat -- . ':!node_modules' \
+        || (npm run format && \
+            git add -u && \
+            git commit -m 'Build' && \
+            git push origin )
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: TG908/publish-github-action@v1
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
