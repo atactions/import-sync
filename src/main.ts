@@ -31,8 +31,8 @@ async function run() {
     let p=await octokit.repos.listBranches({ owner:owner, repo:tp.parent.name});
     console.log("All branches:",p);
     for(let i of p){
-      const base = p[i];
-      const head = p[i];
+      const base = i;
+      const head = i;
        try {
           let pr = await octokit.pulls.create({ owner: context.repo.owner, repo: context.repo.repo, title: prTitle, head: owner + ':' + head, base: base, body: prMessage, merge_method: mergeMethod, maintainer_can_modify: false });
           await octokit.pulls.merge({ owner: context.repo.owner, repo: context.repo.repo, pull_number: pr.data.number });
