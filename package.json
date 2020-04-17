@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/TG908/fork-sync.git"
+    "url": "git+https://github.com/atactions/fork-sync.git"
   },
   "keywords": [
     "actions",
@@ -20,7 +20,7 @@
     "automation",
     "sync"
   ],
-  "author": "TG908",
+  "author": "atactions",
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.0.0",
