@@ -2,7 +2,7 @@
 [![Build](https://github.com/atactions/fork-sync/workflows/Build%20and%20publish%20result/badge.svg)](https://github.com/atactions/fork-sync/actions?workflow=Build%20and%20publish%20result)
 ![Version](https://img.shields.io/github/v/release/atactions/fork-sync?style=flat-square)
 
-Forked from ![TG908/fork-sync](https://github.com/TG908/fork-sync) ![Version](https://img.shields.io/github/v/release/tg908/fork-sync?style=flat-square)with additions of `allbranches` parameter to sync all branches of fork repo.
+Forked from ![TG908/fork-sync](https://github.com/TG908/fork-sync) ![Version](https://img.shields.io/github/v/release/tg908/fork-sync?style=flat-square)with additions of `allbranches` parameter to sync all branches of fork repo when setted to true.
 
 Github action to sync your Forks.
 This action uses octokit and the GitHub API to automatically creates and merges a pull request with the head defined by `ownwer`:`head` into the base defined by `base`. If you create a PR in the same repository you can omit the `owner` parameter.
