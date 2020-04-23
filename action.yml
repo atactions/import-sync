@@ -33,7 +33,7 @@ inputs:
   allbranches:
     description: 'Wheather sync all branches'
     required: false
-    default:'false'
+    default: false
     
 runs:
   using: 'node12'
