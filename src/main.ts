@@ -28,8 +28,8 @@ async function run() {
 } else {
   try{
     let tp=await octokit.repos.get({ owner: context.repo.owner, repo: context.repo.repo});
-    let login=tp.data.parent.owner.login;
-    let p=await octokit.repos.listBranches({ owner:login, repo:tp.data.parent.name});    
+    let owner=tp.data.parent.owner.login;
+    let p=await octokit.repos.listBranches({ owner:owner, repo:tp.data.parent.name});    
     console.log("All branches:",p.data);
     for(let i of p.data){
       const base = i.name;
