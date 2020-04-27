@@ -1,6 +1,6 @@
-name: 'Fork Sync'
-description: 'Keep your fork up to date'
-author: 'TG908'
+name: 'Import Sync'
+description: 'Keep your imported repo up to date'
+author: 'atactions'
 branding:
   icon: 'git-branch'
   color: 'black'
@@ -11,14 +11,6 @@ inputs:
   github_token:
     description: 'Token for the github API'
     required: true
-  head:
-    description: 'Branch to track'
-    required: false
-    default: 'master'
-  base:
-    description: 'Branch to keep updated'
-    required: false
-    default: 'master'
   merge_method:
     description: 'Merge method to use'
     required: false
@@ -26,15 +18,29 @@ inputs:
   pr_title:
     description: 'The title of the pull request'
     required: false
-    default: 'Fork Sync'
+    default: 'Import Sync'
   pr_message:
     description: 'The message in the pull request'
     required: false
-  allbranches:
-    description: 'Wheather sync all branches'
-    required: false
-    default: false
-    
+  cmds:
+    description: 'The message in the pull request'
+    required: true
+    default:
+        - 'git clone --bare --depth=1 --origin import --no-single-branch :url _importrepo'
+        - 'cd _importrepo'
+        - 'git remote add origin https://x-access-token::github_token@github.com/:repository.git'
+        - 'git config --global user.email "github-actions[bot]@users.noreply.github.com"'
+        - 'git push origin --tags +refs/remotes/import/*:refs/remotes/origin/*'
+  url:
+    description: 'the url for import repo'
+    required: true
+  repository:
+    description: 'repository with format of "owner/name"'
+    required: true
+  github_token:
+    description: 'github_token for access imported repo'
+    required: true
+
 runs:
   using: 'node12'
   main: 'lib/main.js'
