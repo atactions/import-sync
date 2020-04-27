@@ -3,11 +3,11 @@ import * as exec from '@actions/exec';
 const Github = require('@actions/github');
 const Octokit = require('@octokit/rest').plugin(require('@octokit/plugin-retry'));
 const context = Github.context;
-const octokit = new Octokit({auth: githubToken});
+const github_token=core.getInput('github_token', { required: true });
+const octokit = new Octokit({auth: github_token});
 const url=core.getInput('url', { required: true });
 const cmds=core.getInput('cmds', { required: true });
 const repository=core.getInput('repository', { required: true });
-const github_token=core.getInput('github_token', { required: true });
 
 async function run() {
   try {
