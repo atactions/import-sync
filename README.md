@@ -38,5 +38,5 @@ jobs:
 |   url           | ❌          |                        |   original url of imported repo                    |
 |   github_token  | ❌          |                        |   Token  to access the Github API                    |
 |   repository    | ❌          |                 |   repository with format of owner/name                                      |
-|   cmds          | ❌          | see details in ![action.yml](https://github.com/atactions/import-sync/blob/master/action.yml)   |   cmdlines to exec                                        |
+|   cmds          | ✅          | default to use git,see details in ![action.yml](https://github.com/atactions/import-sync/blob/master/action.yml)   |   cmdlines to exec                                        |
 
