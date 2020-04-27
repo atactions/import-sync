@@ -24,6 +24,7 @@
   "license": "MIT",
   "dependencies": {
     "@actions/core": "^1.0.0",
+    "@actions/exec": "^1.0.0",
     "@actions/github": "^1.0.0",
     "@octokit/plugin-retry": "^2.2.0",
     "@octokit/rest": "^16.30.1",
