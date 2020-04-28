@@ -27,7 +27,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           url: #original url of imported repo
           repository: owner/name #imported repo
-          cmds: #cmdlines to exec
+          cmds: #cmdlines to exec,parameters github_token,url,repository are used
          
 ```
 
