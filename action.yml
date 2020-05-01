@@ -5,12 +5,6 @@ branding:
   icon: 'git-branch'
   color: 'black'
 inputs:
-  owner:
-    description: 'Owner of the forked repository'
-    required: false
-  github_token:
-    description: 'Token for the github API'
-    required: true
   merge_method:
     description: 'Merge method to use'
     required: false
