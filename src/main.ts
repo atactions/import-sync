@@ -15,9 +15,9 @@ async function run() {
   .replace(':repository',repository)
   .replace(':github_token',github_token);
   console.log('cmds: ',cmds_);
-  let args=JSON.parse(cmds_);
+  let args=cmds_.split('\n');
   for (let c of args){
-	await exec.exec(c,[]);
+	await exec.exec(c.trim(),[]);
   }  
   } catch (error) {
       console.log(error);
