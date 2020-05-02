@@ -17,7 +17,8 @@ async function run() {
   console.log('cmds: ',cmds_);
   let args=cmds_.split('\n');
   for (let c of args){
-	await exec.exec(c.trim(),[]);
+	c=c.trim();
+	if(c){await exec.exec(,[])};
   }  
   } catch (error) {
       console.log(error);
