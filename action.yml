@@ -20,7 +20,7 @@ inputs:
     description: 'The message in the pull request'
     required: true
     default: |-
-        git clone --bare --depth=1 --origin import --no-single-branch :url _importrepo
+        git clone --depth=1 --origin import --no-single-branch :url _importrepo
         cd _importrepo
         git remote add origin https://x-access-token::github_token@github.com/:repository.git
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
