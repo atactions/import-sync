@@ -18,7 +18,7 @@ async function run() {
   let args=cmds_.split('\n');
   for (let c of args){
 	c=c.trim();
-	if(c){await exec.exec(,[])};
+	if(c){await exec.exec(c,[])};
   }  
   } catch (error) {
       console.log(error);
