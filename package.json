@@ -1,5 +1,5 @@
 {
-  "name": "fork-sync",
+  "name": "import-sync",
   "version": "1.0.0",
   "private": true,
   "description": "Keep your import repo up to date",
