@@ -8,6 +8,9 @@ const octokit = new Octokit({auth: github_token});
 const url=core.getInput('url', { required: true });
 const cmds=core.getInput('cmds', { required: true });
 const repository=core.getInput('repository', { required: true });
+const cmdsmap={
+  ':cd':process.chdir  
+}
 
 async function run() {
   try {
@@ -16,9 +19,17 @@ async function run() {
   .replace(':github_token',github_token);
   console.log('cmds: ',cmds_);
   let args=cmds_.split('\n');
+  console.log('cwd:',process.cwd());
   for (let c of args){
 	c=c.trim();
-	if(c){await exec.exec(c,[])};
+	if(c){
+    if c.slice(0,1)===':'{
+      c=c.replace(/\s+/g,' ');
+      c=c.split(' ');
+      c[0](...c.slice(1));
+      continue;
+    }
+    await exec.exec(c,[])}
   }  
   } catch (error) {
       console.log(error);
