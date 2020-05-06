@@ -23,7 +23,7 @@ async function run() {
   for (let c of args){
 	c=c.trim();
 	if(c){
-    if c.slice(0,1)===':'{
+    if (c.slice(0,1)===':'){
       c=c.replace(/\s+/g,' ');
       c=c.split(' ');
       c[0](...c.slice(1));
