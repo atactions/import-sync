@@ -21,7 +21,7 @@ inputs:
     required: true
     default: |-
         git clone --depth=1 --origin import --no-single-branch :url _importrepo
-        cd _importrepo
+        :cd _importrepo
         git remote add origin https://x-access-token::github_token@github.com/:repository.git
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         git push origin --tags "+refs/remotes/import/*:refs/remotes/origin/*"
