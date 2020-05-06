@@ -26,7 +26,7 @@ async function run() {
     if (c.slice(0,1)===':'){
       c=c.replace(/\s+/g,' ');
       let s=c.split(' ');
-      let f=cmdmaps[s[0]];
+      let f=cmdsmap[s[0]];
       if(!f) {
         core.setFailed('there is no cmd map:',s[0]);
         break;
