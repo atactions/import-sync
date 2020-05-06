@@ -28,7 +28,8 @@ async function run() {
       let s=c.split(' ');
       let f=cmdsmap[s[0]];
       if(!f) {
-        core.setFailed('there is no cmd map:',s[0]);
+        console.log('there is no cmd map:',s[0]);
+	core.setFailed(`invalid cmd: ${s[0]}`);
         break;
       }
       f(...s.slice(1));
