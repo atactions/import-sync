@@ -25,8 +25,8 @@ async function run() {
 	if(c){
     if (c.slice(0,1)===':'){
       c=c.replace(/\s+/g,' ');
-      c=c.split(' ');
-      c[0](...c.slice(1));
+      let s=c.split(' ');
+      s[0](...s.slice(1));
       continue;
     }
     await exec.exec(c,[])}
